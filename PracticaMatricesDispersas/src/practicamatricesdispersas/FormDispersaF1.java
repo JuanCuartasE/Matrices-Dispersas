@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package practicamatricesdispersas;
 
-/**
- *
- * @author allil
- */
 import java.awt.Graphics;
 import javax.swing.JOptionPane;
 import javax.swing.event.ChangeEvent;
@@ -26,7 +19,7 @@ public class FormDispersaF1 extends javax.swing.JFrame  implements ChangeListene
         dispersaF1.insetarDato(2, 1, 70);
         dispersaF1.insetarDato(5,5, 40);
         dispersaF1.insetarDato(1, 3, 20);
-        dispersaF1.insetarDato(2,6, 30);
+        dispersaF1.insetarDato(2,6, 300);
         dispersaF1.insetarDato(6, 8, 7);
         dispersaF1.insetarDato(5,9, 4);
     }
@@ -302,7 +295,7 @@ layout.setVerticalGroup(
         int N=0, M =0;
         do
         {
-            entrada = JOptionPane.showInputDialog(this,"ingrese el numero de filas de la matriz dispersa [ 1 , 10]");
+            entrada = JOptionPane.showInputDialog(this,"Ingrese el numero de filas de la matriz dispersa [ 1 , 10]");
 
             if( entrada != null)
             {
@@ -311,7 +304,7 @@ layout.setVerticalGroup(
                     N = Integer.parseInt(entrada);
                     if( N< 1|| N> 10)
                     {
-                        JOptionPane.showMessageDialog(this,"debe ingresar un entero entre [ 1, 10]");
+                        JOptionPane.showMessageDialog(this,"Debe ingresar un entero entre [ 1, 10]");
                     }
                     else
                     {
@@ -320,7 +313,7 @@ layout.setVerticalGroup(
                 }
                 catch( NumberFormatException x)
                 {
-                    JOptionPane.showMessageDialog(this, "la N ingresada debe ser numerica");
+                    JOptionPane.showMessageDialog(this, "La N ingresada debe ser numerica");
                 }
             }
 
@@ -328,7 +321,7 @@ layout.setVerticalGroup(
 
         do
         {
-            entrada = JOptionPane.showInputDialog(this,"ingrese el numero de columnas de la matriz dispersa [ 1 , 10]");
+            entrada = JOptionPane.showInputDialog(this,"Ingrese el numero de columnas de la matriz dispersa [ 1 , 10]");
 
             if( entrada != null)
             {
@@ -337,7 +330,7 @@ layout.setVerticalGroup(
                     M = Integer.parseInt(entrada);
                     if( M< 1|| M> 10)
                     {
-                        JOptionPane.showMessageDialog(this,"debe ingresar un entero entre [ 1, 10]");
+                        JOptionPane.showMessageDialog(this,"Debe ingresar un entero entre [ 1, 10]");
                     }
                     else
                     {
@@ -346,7 +339,7 @@ layout.setVerticalGroup(
                 }
                 catch( NumberFormatException x)
                 {
-                    JOptionPane.showMessageDialog(this, "la M ingresada debe ser numerica");
+                    JOptionPane.showMessageDialog(this, "La M ingresada debe ser numerica");
                 }
             }
 
@@ -369,7 +362,7 @@ layout.setVerticalGroup(
         int cantidad=0;
         do
         {
-            entrada = JOptionPane.showInputDialog(this,"ingrese la cantidad a redimensionar [ -3 , 3]");
+            entrada = JOptionPane.showInputDialog(this,"Ingrese la cantidad a redimensionar [ -3 , 3]");
 
             if( entrada != null)
             {
@@ -378,7 +371,7 @@ layout.setVerticalGroup(
                     cantidad = Integer.parseInt(entrada);
                     if( cantidad< -3|| cantidad> 3)
                     {
-                        JOptionPane.showMessageDialog(this,"debe ingresar un entero entre [  -3 , 3]");
+                        JOptionPane.showMessageDialog(this,"Debe ingresar un entero entre [  -3 , 3]");
                     }
                     else
                     {
@@ -387,7 +380,7 @@ layout.setVerticalGroup(
                 }
                 catch( NumberFormatException x)
                 {
-                    JOptionPane.showMessageDialog(this, "la cantidad ingresada debe ser numerica");
+                    JOptionPane.showMessageDialog(this, "La cantidad ingresada debe ser numerica");
                 }
             }
 
@@ -410,7 +403,7 @@ layout.setVerticalGroup(
     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         DialogIngresarDatos x = new DialogIngresarDatos( this, true, dispersaF1);
-        promedioPares();
+        //promedioPares();
     }//GEN-LAST:event_jButton4ActionPerformed
     
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -455,10 +448,9 @@ layout.setVerticalGroup(
         repaint();
     }//GEN-LAST:event_jButton10ActionPerformed
     
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        DialogIngresarDatos x = new DialogIngresarDatos( this, true, dispersaF1);
-        x.setLocation(600, 50);
-        x.setVisible(true);
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed   
+        
+        dispersaF1.mostrarMaxDigitosPares(this);
         repaint();
     }//GEN-LAST:event_jButton11ActionPerformed
     
